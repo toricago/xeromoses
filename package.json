@@ -1,0 +1,34 @@
+{
+  "name": "xeromoses-homepage",
+  "version": "1.0.0",
+  "description": "Xeromoses's website",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "prettier": "prettier --write .",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Yanat Chaiprasert",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/icons": "^1.1.7",
+    "@chakra-ui/react": "^2.4.2",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@react-three/drei": "^9.46.0",
+    "@react-three/fiber": "^8.9.1",
+    "framer-motion": "^7.6.18",
+    "next": "^13.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.3.1",
+    "three": "^0.147.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-next": "^13.0.6",
+    "prettier": "^2.6.2"
+  }
+}
