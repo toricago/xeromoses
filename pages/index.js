@@ -20,7 +20,7 @@ import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import thumbPixelia from '../public/images/pixelia.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import thumbMoneyWise from '../public/images/money-wise.png'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -179,22 +179,21 @@ const Home = () => (
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://heartfelt-mooncake-fa5f86.netlify.app/"
-            title="pixelia"
+            href="https://pixelia.netlify.app"
+            title="Pixelia"
             thumbnail={thumbPixelia}
           >
             A website that user can generate images using DALL-E open ai, and
             can share it to the web's community
           </GridItem>
           <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
+            href="https://money-wise.netlify.app/"
+            title="Money Wise"
+            thumbnail={thumbMoneyWise}
           >
-            A Markdown note-taking app
+            A blog for finance lovers created by Astro
           </GridItem>
         </SimpleGrid>
-
         <Box align="center" my={4}>
           <NextLink href="/posts" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
