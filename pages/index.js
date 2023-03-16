@@ -37,7 +37,7 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m an indie app developer based in Japan!
+        Hello, I&apos;m a fullstack software developer from Thailand !
       </Box>
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
@@ -87,13 +87,13 @@ const Home = () => (
           useful, fun and challenging. I make sure that I will stay up to date
           with the latest technology because my life is a never-ending learning.
         </Paragraph>
-        <Box align="center" my={4}>
+        {/* <Box align="center" my={4}>
           <NextLink href="/works" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               My portfolio
             </Button>
           </NextLink>
-        </Box>
+        </Box> */}
       </Section>
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
@@ -123,13 +123,12 @@ const Home = () => (
         </Heading>
         <Paragraph>
           Art, Music, Games,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
+          {/* <Link href="https://illust.odoruinu.net/" target="_blank"> */}
+          Drawing
+          {/* </Link> */}, Playing Drums,{' '}
+          {/* <Link href="https://500px.com/p/craftzdog" target="_blank"> */}
+          Photography
+          {/* </Link> */}
           {/* , Leica, Machine Learning */}
         </Paragraph>
       </Section>
@@ -177,6 +176,10 @@ const Home = () => (
           </ListItem>
         </List>
 
+        <Heading as="h3" variant="section-title">
+          Playground Projects
+        </Heading>
+
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
             href="https://pixelia.netlify.app"
@@ -194,13 +197,13 @@ const Home = () => (
             A blog for finance lovers created by Astro
           </GridItem>
         </SimpleGrid>
-        <Box align="center" my={4}>
+        {/* <Box align="center" my={4}>
           <NextLink href="/posts" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               Popular posts
             </Button>
           </NextLink>
-        </Box>
+        </Box> */}
       </Section>
     </Container>
   </Layout>

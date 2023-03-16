@@ -61,7 +61,7 @@ const Navbar = props => {
             <Logo />
           </Heading>
         </Flex>
-        <Stack
+        {/* <Stack
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
@@ -75,9 +75,9 @@ const Navbar = props => {
           <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem>
-        </Stack>
+        </Stack> */}
         {/* Mobile */}
-        <Box flex={1} align="right">
+        {/* <Box flex={1} align="right">
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
@@ -101,7 +101,7 @@ const Navbar = props => {
               </MenuList>
             </Menu>
           </Box>
-        </Box>
+        </Box> */}
       </Container>
     </Box>
   )
