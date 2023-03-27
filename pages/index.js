@@ -1,11 +1,9 @@
-import { ChevronRightIcon } from '@chakra-ui/icons'
 import {
   Box,
   Button,
   chakra,
   Container,
   Heading,
-  Link,
   useColorModeValue,
   SimpleGrid,
   List,
@@ -86,13 +84,6 @@ const Home = () => (
           challenging. I make sure that I will stay up to date with the latest
           technology because my life is a never-ending learning.
         </Paragraph>
-        {/* <Box align="center" my={4}>
-          <NextLink href="/works" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
-            </Button>
-          </NextLink>
-        </Box> */}
       </Section>
       <Section delay={0.2}>
         <Heading as="h3" color="tomato" variant="section-title">
@@ -117,11 +108,7 @@ const Home = () => (
           I ♥
         </Heading>
         <Paragraph>
-          Art, Music, Games, {/* <Link href="" target="_blank"> */}
-          Drawing
-          {/* </Link> */}, Playing Drums, {/* <Link href="" target="_blank"> */}
-          Photography
-          {/* </Link> */}
+          Art, Music, Games, Drawing, Playing Drums, Photography
         </Paragraph>
       </Section>
 
@@ -196,13 +183,6 @@ const Home = () => (
             A blog for finance lovers created by Astro
           </ProjectGridItem>
         </SimpleGrid>
-        {/* <Box align="center" my={4}>
-          <NextLink href="/posts" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Popular posts
-            </Button>
-          </NextLink>
-        </Box> */}
       </Section>
     </Container>
   </Layout>
