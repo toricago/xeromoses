@@ -17,7 +17,7 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
+import { ProjectGridItem } from '../components/grid-item'
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import thumbPixelia from '../public/images/pixelia.png'
 import thumbMoneyWise from '../public/images/money-wise.png'
@@ -37,14 +37,14 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m a fullstack software developer from Thailand !
+        Hello, I&apos;m a front-end web developer from Thailand !
       </Box>
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             YANAT CHAIPRASERT
           </Heading>
-          <p>Software Developer</p>
+          <p>Front-End Developer</p>
         </Box>
         <Box
           flexShrink={0}
@@ -72,20 +72,19 @@ const Home = () => (
           </Box>
         </Box>
       </Box>
-
       <Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
+        <Heading as="h3" color="tomato" variant="section-title">
           Introduction
         </Heading>
         <Paragraph>
-          Hello and welcome to my web portfolio! My name is Mos, and I am a
-          passionate Frontend Developer with 4 years of experience in developing
-          beautiful, user-friendly, and responsive websites. With my expertise
-          in JavaScript-based stacks, and various frontend frameworks, I
-          specialize in creating interactive and engaging web interfaces that
-          enhance the user experience. My passion is to create somethings
-          useful, fun and challenging. I make sure that I will stay up to date
-          with the latest technology because my life is a never-ending learning.
+          Welcome to my web portfolio! My name is Mos, and I am a passionate
+          Frontend Developer with 4 years of experience in developing beautiful,
+          user-friendly, and responsive websites. With my expertise in
+          JavaScript-based stacks, and various frontend frameworks, I specialize
+          in creating interactive and engaging web interfaces that enhance the
+          user experience. My passion is to create somethings useful, fun and
+          challenging. I make sure that I will stay up to date with the latest
+          technology because my life is a never-ending learning.
         </Paragraph>
         {/* <Box align="center" my={4}>
           <NextLink href="/works" passHref scroll={false}>
@@ -96,13 +95,9 @@ const Home = () => (
         </Box> */}
       </Section>
       <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
+        <Heading as="h3" color="tomato" variant="section-title">
           Bio
         </Heading>
-        <BioSection>
-          <BioYear>1994</BioYear>
-          Born in Thailand.
-        </BioSection>
         <BioSection>
           <BioYear>2013</BioYear>
           Graduated the Bachelor Degree in the Graduate School of Computer
@@ -118,84 +113,88 @@ const Home = () => (
         </BioSection>
       </Section>
       <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
+        <Heading as="h3" color="tomato" variant="section-title">
           I ♥
         </Heading>
         <Paragraph>
-          Art, Music, Games,{' '}
-          {/* <Link href="https://illust.odoruinu.net/" target="_blank"> */}
+          Art, Music, Games, {/* <Link href="" target="_blank"> */}
           Drawing
-          {/* </Link> */}, Playing Drums,{' '}
-          {/* <Link href="https://500px.com/p/craftzdog" target="_blank"> */}
+          {/* </Link> */}, Playing Drums, {/* <Link href="" target="_blank"> */}
           Photography
           {/* </Link> */}
-          {/* , Leica, Machine Learning */}
         </Paragraph>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          On the web
+          Socials
         </Heading>
         <List mb={5}>
           <ListItem>
             <NextLink href="https://github.com/toricago" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoGithub />}
-              >
-                @toricago
-              </Button>
+              <a target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoGithub />}
+                >
+                  @toricago
+                </Button>
+              </a>
             </NextLink>
           </ListItem>
           <ListItem>
-            <NextLink
-              href="https://www.linkedin.com/in/yanut-chaiprasert-629666150/"
-              target="_blank"
-            >
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoLinkedin />}
-              >
-                @Yanut Chaiprasert
-              </Button>
+            <NextLink href="https://www.linkedin.com/in/yanut-chaiprasert-629666150/">
+              <a target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoLinkedin />}
+                >
+                  @Yanut Chaiprasert
+                </Button>
+              </a>
             </NextLink>
           </ListItem>
           <ListItem>
             <NextLink href="https://instagram.com/xeromoses" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
-              >
-                @xeromoses
-              </Button>
+              <a target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoInstagram />}
+                >
+                  @xeromoses
+                </Button>
+              </a>
             </NextLink>
           </ListItem>
         </List>
 
-        <Heading as="h3" variant="section-title">
-          Playground Projects
+        <Heading as="h3" variant="section-title" pb={3}>
+          Personal Projects
         </Heading>
-
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://pixelia.netlify.app"
+          <ProjectGridItem
+            demo_href="https://pixelia.netlify.app"
+            github_href="https://github.com/toricago/pixelia"
             title="Pixelia"
             thumbnail={thumbPixelia}
+            stacks="MERN tailwindcss OpenAI (for live demo please wait for
+              server to start)"
           >
-            A website that user can generate images using DALL-E open ai, and
-            can share it to the web's community
-          </GridItem>
-          <GridItem
-            href="https://money-wise.netlify.app/"
+            A website that user can generate images using open ai, and can share
+            it to the web's community
+          </ProjectGridItem>
+          <ProjectGridItem
+            demo_href="https://money-wise.netlify.app/"
+            github_href="https://github.com/toricago/money-wise"
             title="Money Wise"
             thumbnail={thumbMoneyWise}
+            stacks="AstroJs tailwindcss NetlifyCMS"
           >
             A blog for finance lovers created by Astro
-          </GridItem>
+          </ProjectGridItem>
         </SimpleGrid>
         {/* <Box align="center" my={4}>
           <NextLink href="/posts" passHref scroll={false}>
