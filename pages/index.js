@@ -19,6 +19,7 @@ import { ProjectGridItem } from '../components/grid-item'
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import thumbPixelia from '../public/images/pixelia.png'
 import thumbMoneyWise from '../public/images/money-wise.png'
+import thumbPicsxit from '../public/images/picsxit.png'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -163,6 +164,16 @@ const Home = () => (
         </Heading>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <ProjectGridItem
+            demo_href="https://play-picsxit.netlify.app/"
+            title="Picsxit"
+            thumbnail={thumbPicsxit}
+            stacks="SolidJS MaterialUI firebase (constructing...)"
+          >
+            An online game inspired by poppular boardgame "Dixit", with new set
+            of cards created beautifully by ai to expand more of your
+            imagination!
+          </ProjectGridItem>
+          <ProjectGridItem
             demo_href="https://pixelia.netlify.app"
             github_href="https://github.com/toricago/pixelia"
             title="Pixelia"
@@ -171,7 +182,7 @@ const Home = () => (
               server to start)"
           >
             A website that user can generate images using open ai, and can share
-            it to the web's community
+            it to the web's community, Also used for the "Picsxit" project
           </ProjectGridItem>
           <ProjectGridItem
             demo_href="https://money-wise.netlify.app/"

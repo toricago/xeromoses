@@ -46,26 +46,30 @@ export const ProjectGridItem = ({
       <bold>Stacks:</bold> {stacks}
     </Text>
     <Flex justify={'center'}>
-      <NextLink target="_blank" href={github_href} passHref>
-        <a target="_blank" rel="noopener noreferrer">
-          <Button
-            mt={2}
-            mr={1}
-            variant="ghost"
-            colorScheme="teal"
-            leftIcon={<IoLogoGithub />}
-          >
-            Github
-          </Button>
-        </a>
-      </NextLink>
-      <NextLink target="_blank" href={demo_href} passHref>
-        <a target="_blank" rel="noopener noreferrer">
-          <Button mt={2} variant="ghost" colorScheme="teal">
-            Live Demo
-          </Button>
-        </a>
-      </NextLink>
+      {github_href && (
+        <NextLink target="_blank" href={github_href} passHref>
+          <a target="_blank" rel="noopener noreferrer">
+            <Button
+              mt={2}
+              mr={1}
+              variant="ghost"
+              colorScheme="teal"
+              leftIcon={<IoLogoGithub />}
+            >
+              Github
+            </Button>
+          </a>
+        </NextLink>
+      )}
+      {demo_href && (
+        <NextLink target="_blank" href={demo_href} passHref>
+          <a target="_blank" rel="noopener noreferrer">
+            <Button mt={2} variant="ghost" colorScheme="teal">
+              Live Demo
+            </Button>
+          </a>
+        </NextLink>
+      )}
     </Flex>
   </Box>
 )
