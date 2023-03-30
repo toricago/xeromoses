@@ -164,6 +164,7 @@ const Home = () => (
         </Heading>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <ProjectGridItem
+            github_href="https://github.com/toricago/picsxit"
             demo_href="https://play-picsxit.netlify.app/"
             title="Picsxit"
             thumbnail={thumbPicsxit}
